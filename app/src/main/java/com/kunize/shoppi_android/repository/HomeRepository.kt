@@ -2,7 +2,7 @@ package com.kunize.shoppi_android.repository
 
 import com.kunize.shoppi_android.model.HomeData
 
-class HomeRespository(
+class HomeRepository(
     private val assetDataSource: HomeAssetDataSource
 ) {
     fun getHomeData(): HomeData? {

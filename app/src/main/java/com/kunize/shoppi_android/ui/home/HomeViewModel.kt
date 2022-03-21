@@ -5,9 +5,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.kunize.shoppi_android.model.Banner
 import com.kunize.shoppi_android.model.Title
-import com.kunize.shoppi_android.repository.HomeRespository
+import com.kunize.shoppi_android.repository.HomeRepository
 
-class HomeViewModel(private val homeRespository: HomeRespository) : ViewModel() {
+class HomeViewModel(private val homeRespository: HomeRepository) : ViewModel() {
 
     private val _title = MutableLiveData<Title>()
     val title: LiveData<Title> = _title
