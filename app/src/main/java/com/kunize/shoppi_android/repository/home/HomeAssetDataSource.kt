@@ -1,4 +1,4 @@
-package com.kunize.shoppi_android.repository
+package com.kunize.shoppi_android.repository.home
 
 import com.google.gson.Gson
 import com.kunize.shoppi_android.AssetLoader
