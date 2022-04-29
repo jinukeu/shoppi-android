@@ -7,8 +7,11 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.kunize.shoppi_android.databinding.ItemCategoryBinding
 import com.kunize.shoppi_android.model.Category
+import com.kunize.shoppi_android.ui.common.CategoryDiffCallback
 
-class CategoryAdapter(private val viewModel: CategoryViewModel): ListAdapter<Category, CategoryAdapter.CategoryViewHolder>(CategoryDiffCallback()) {
+class CategoryAdapter(private val viewModel: CategoryViewModel): ListAdapter<Category, CategoryAdapter.CategoryViewHolder>(
+    CategoryDiffCallback()
+) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
         val binding = ItemCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -28,12 +31,3 @@ class CategoryAdapter(private val viewModel: CategoryViewModel): ListAdapter<Cat
     }
 }
 
-class CategoryDiffCallback : DiffUtil.ItemCallback<Category>() {
-    override fun areItemsTheSame(oldItem: Category, newItem: Category): Boolean {
-        return oldItem.categoryId == newItem.categoryId
-    }
-
-    override fun areContentsTheSame(oldItem: Category, newItem: Category): Boolean {
-        return oldItem == newItem
-    }
-}
